@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise2</title>
+    <link rel="stylesheet" href="exercise2.css">
+    <script type="text/javascript" src="exercise2.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+
+
+
+</head>
+<!-- load history box to page -->
+<body onload="updateSearchHistoryUi()">
+
+<div id="text_areas">
+
+    <label> Select country :
+    <input list="countries" name="myCounties" id="country"  /></label>
+    <datalist id="countries">
+        <option value="Finland">
+        <option value="Sweden">
+        <option value="France">
+        <option value="Germany">
+    </datalist>
+
+    ZIP code: <input type="text" id="zip">
+</div>
+
+<div id="search">
+    <button id="search_button" onclick="zipInfo(); myMap()">Search</button>
+</div>
+
+<!--table for results -->
+<div id="table_div">
+    <table id="table">
+        <tr>
+            <td>Place name</td>
+            <td>Long.</td>
+            <td>Lat.</td>
+        </tr>
+    </table>
+
+</div>
+
+<div id="googleMap" style = "width:580px; height:400px;"></div>
+
+
+<div id="history">
+    <p> History : </p>
+
+    <div id="history_list"></div>
+
+</div>
+
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCo25cWhmbGGqdjlJwIK4m8BtPjgS3WHcY"
+>
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 1</title>
+    <link rel="stylesheet" href="exercise1.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/JsBarcode.all.min.js"></script>
+    <script type="text/javascript" src="exercise1.js"></script>
+
+</head>
+<body>
+<div id="text">
+    Virtual Bar Code: <input type="text" name="VirtualBarCode" class="textArea" id="TextArea"
+                             placeholder="enter the virtual code here" size="100">
+</div>
+
+<div id="Decode">
+    <button class="button" id="decode_button" onclick="getSubsrtings()">Decode</button>
+</div>
+<div id="Hide">
+    <button class="button" id="hide_button" onclick="changeName(this)">Hide</button>
+</div>
+
+<div class="information_section">
+
+    <div class="IBAN text">Payee's IBAN: </div>
+
+    <div class="Reference text">Paymen reference: </div>
+
+    <div class="Ammount text">Ammount to be paid: </div>
+
+    <div class="Date text">Due date: </div>
+
+    <svg id="barcode"></svg>
+
+</div>
+</body>
+</html>
